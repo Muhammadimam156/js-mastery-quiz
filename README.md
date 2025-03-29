@@ -113,17 +113,5 @@ Project Link: [https://github.com/Muhammadimam156/js-mastery-quiz](https://githu
 
 ---
 
-This README includes:
-✅ Professional badge headers  
-✅ Clear feature breakdown  
-✅ Visual hierarchy  
-✅ Code snippet example  
-✅ Easy installation instructions  
-✅ Contribution guidelines  
-✅ License and contact info  
-
-Would you like me to add any specific sections like:
-- Roadmap?
-- Detailed API documentation?
-- Browser compatibility table?
+?
 - Performance metrics?
