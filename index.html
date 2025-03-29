@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Mastery | Professional JavaScript Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">JS</span>
+                <span>Mastery</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="quiz.html" class="nav-link active">Quiz</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="login-btn">Log In</button>
+                <button class="btn btn-primary" id="signup-btn">Sign Up</button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="quiz-section">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2 class="quiz-title">JavaScript Fundamentals</h2>
+                <div class="quiz-meta">
+                    <div class="timer" id="timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer-display">15</span>s
+                    </div>
+                    <div>Score: <strong id="score-value">0</strong></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+            
+            <div class="quiz-body" id="quiz-body">
+                <div class="question-text" id="question-text"></div>
+                <div class="answer-options" id="answer-options"></div>
+            </div>
+            
+            <div class="quiz-footer">
+                <div id="question-counter"></div>
+                <button class="btn btn-primary" id="next-btn" disabled>
+                    <span id="next-btn-text">Next Question</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <a href="index.html" class="footer-logo">
+                    <span>JS</span>
+                    <span>Mastery</span>
+                </a>
+                <p class="footer-description">
+                    Professional JavaScript assessments to help you evaluate and improve your coding skills.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-group">
+                <h3 class="footer-links-title">Product</h3>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="#" class="footer-link">Features</a></li>
+                    <li class="footer-link-item"><a href="#" class="footer-link">Pricing</a></li>
+                    <li class="footer-link-item"><a href="#" class="footer-link">Assessments</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-group">
+                <h3 class="footer-links-title">Company</h3>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="#" class="footer-link">About</a></li>
+                    <li class="footer-link-item"><a href="#" class="footer-link">Blog</a></li>
+                    <li class="footer-link-item"><a href="#" class="footer-link">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-group">
+                <h3 class="footer-links-title">Legal</h3>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="#" class="footer-link">Privacy</a></li>
+                    <li class="footer-link-item"><a href="#" class="footer-link">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 JS Mastery. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="modal">
+        <div class="modal-content">
+            <div class="results-container">
+                <h2 class="results-title">Assessment Complete</h2>
+                <div class="results-score" id="final-score">0/10</div>
+                <p class="results-description" id="results-description"></p>
+                <div class="results-actions">
+                    <button class="btn btn-primary" id="retake-btn">
+                        <i class="fas fa-redo"></i> Retake Quiz
+                    </button>
+                    <button class="btn btn-outline" id="dashboard-btn">
+                        <i class="fas fa-tachometer-alt"></i> View Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/questions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
