@@ -101,9 +101,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - youremail@example.com
 
-Project Link: [https://github.com/yourusername/js-mastery-quiz](https://github.com/yourusername/js-mastery-quiz)
+Project Link: [https://github.com/Muhammadimam156/js-mastery-quiz](https://github.com/Muhammadimam156/js-mastery-quiz)
 
 ---
 
