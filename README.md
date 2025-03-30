@@ -8,7 +8,7 @@
 
 A professional JavaScript assessment tool to evaluate and improve core JS skills through timed quizzes with detailed explanations.
 
-👉 [Live Demo](#) *(Coming Soon)*  
+👉 [Live Demo]( https://muhammadimam156.github.io/js-mastery-quiz/)  
 📌 [How It Works](#how-it-works) • [Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation) • [Contributing](#-contributing)
 
 
