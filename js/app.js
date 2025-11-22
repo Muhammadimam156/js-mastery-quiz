@@ -1,4 +1,4 @@
-// DOM Elements
+
 const questionElement = document.getElementById('question-text');
 const answerOptions = document.getElementById('answer-options');
 const nextButton = document.getElementById('next-btn');
@@ -28,7 +28,7 @@ let timeLeft = 15;
 let timer;
 let selectedAnswer = null;
 
-// Initialize Quiz
+
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -36,7 +36,7 @@ function startQuiz() {
     showQuestion();
 }
 
-// Display Question
+
 function showQuestion() {
     resetState();
     const currentQuestion = questions[currentQuestionIndex];
