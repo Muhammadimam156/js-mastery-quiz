@@ -21,7 +21,6 @@ const signupModal = document.getElementById('signup-modal');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
-// Quiz State
 let currentQuestionIndex = 0;
 let score = 0;
 let timeLeft = 15;
@@ -41,12 +40,12 @@ function showQuestion() {
     resetState();
     const currentQuestion = questions[currentQuestionIndex];
     
-    // Update UI
+    
     questionElement.textContent = currentQuestion.question;
     questionCounter.textContent = `Question ${currentQuestionIndex + 1}/${questions.length}`;
     progressBar.style.width = `${((currentQuestionIndex + 1) / questions.length) * 100}%`;
     
-    // Set next button text
+    
     nextBtnText.textContent = currentQuestionIndex === questions.length - 1 ? 'Finish Quiz' : 'Next Question';
 
     // Create Answer Options
